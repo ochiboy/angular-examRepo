@@ -13,6 +13,7 @@ import { CartService } from './services/cart.service';
 import { DataService } from './data.service';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { DaysDetailsComponent } from './days-details/days-details.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DaysDetailsComponent } from './days-details/days-details.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CompanyDetailsComponent,
-    DaysDetailsComponent
+    DaysDetailsComponent,
+    SearchBarComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartService, DataService]
