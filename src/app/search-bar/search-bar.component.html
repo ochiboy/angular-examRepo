@@ -1,4 +1,3 @@
-<h2> Search Bar </h2>
 
 <input type="text" #searchField [(ngModel)]="searchText" (input)="search()" />
 <div *ngFor="let company of companies; index as i"

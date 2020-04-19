@@ -1,17 +1,17 @@
 <table>
   <tr>
     <td>
-      <button (click)="setPeriod('7DAYS')">
+      <button (click)="setPeriod('7DAYS')" [ngClass]="periodName == '7DAYS' ? 'active' : ''">
         7 Days
       </button>
     </td>
     <td>
-      <button (click)="setPeriod('30DAYS')">
+      <button (click)="setPeriod('30DAYS')" [ngClass]="periodName == '30DAYS' ? 'active' : ''">
         30 Days
       </button>
     </td>
     <td>
-      <button (click)="setPeriod('60DAYS')">
+      <button (click)="setPeriod('60DAYS')" [ngClass]="periodName == '60DAYS' ? 'active' : ''">
         60 Days
       </button>
     </td>

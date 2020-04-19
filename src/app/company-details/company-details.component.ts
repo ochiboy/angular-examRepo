@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges} from '@angular/core';
 import { Input } from '@angular/core';
 
 
@@ -10,20 +10,22 @@ import { Input } from '@angular/core';
 export class CompanyDetailsComponent implements OnInit,OnChanges {
   @Input() company;
   selectedPeriod;
+  periodName;
 
   constructor() { }
 
   ngOnInit() {
-    this.selectedPeriod = this.company['7DAYS']; 
+    this.periodName = '7DAYS';
+    this.selectedPeriod = this.company[this.periodName]; 
   }
 
   ngOnChanges() {
-    this.selectedPeriod = this.company['7DAYS']; 
+    this.periodName = '7DAYS';
+    this.selectedPeriod = this.company[this.periodName]; 
   }
 
-  setPeriod(period) {
-    this.selectedPeriod = this.company[period];
+  setPeriod(periodName) {
+    this.periodName = periodName
+    this.selectedPeriod = this.company[this.periodName];
   }
-  
-
 }
