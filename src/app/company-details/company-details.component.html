@@ -23,24 +23,33 @@
     <td>
       Average change
     </td>
-    <td>
-      {{selectedPeriod.AC}}
+    <td [ngClass]="{
+              'positive' : selectedPeriod.AC > 0,
+              'negative' : selectedPeriod.AC < 0
+          }">
+        {{selectedPeriod.AC > 0 ? '+' : ''}}{{selectedPeriod.AC | number: '1.2-2'}}{{'%'}}
     </td>
   </tr>
-   <tr>
+  <tr>
     <td>
       Period change
     </td>
-    <td>
-      {{selectedPeriod.PC}}
+    <td [ngClass]="{
+              'positive' : selectedPeriod.PC > 0,
+              'negative' : selectedPeriod.PC < 0
+          }">
+        {{selectedPeriod.PC > 0 ? '+' : ''}}{{selectedPeriod.PC | number: '1.2-2'}}{{'%'}}
     </td>
   </tr>
-   <tr>
+  <tr>
     <td>
       Next Predicted change
     </td>
-    <td>
-      {{selectedPeriod.NPC}}
+    <td [ngClass]="{
+              'positive' : selectedPeriod.NPC > 0,
+              'negative' : selectedPeriod.NPC < 0
+          }">
+        {{selectedPeriod.NPC > 0 ? '+' : ''}}{{selectedPeriod.NPC | number: '1.2-2'}}{{'%'}}
     </td>
   </tr>
 </table>

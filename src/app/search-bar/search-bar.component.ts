@@ -13,6 +13,7 @@ export class SearchBarComponent implements OnInit {
   searchText : string;
   companies;
   selectedCompany;
+  companyIndex;
 
   constructor(
     private dataService: DataService
@@ -26,6 +27,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   search() {
+    this.companyIndex = null;
     this.selectedCompany = null;
     this.companies = [];
     for (var prop in this.allData) {
@@ -36,8 +38,8 @@ export class SearchBarComponent implements OnInit {
   }
 
   select(index) {
-    console.log(index);
-    this.selectedCompany = this.allData[this.companies[index]];
+    this.companyIndex = index;
+    this.selectedCompany = this.allData[this.companies[this.companyIndex]];
   }
 
 }
