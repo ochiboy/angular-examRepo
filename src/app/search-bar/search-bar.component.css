@@ -2,8 +2,14 @@ body {
   margin-left: 10px;
 }
 
+#searchField {
+  border: none;
+  font-size: 17px;
+}
+
 .searchResult {
   max-width: 160px;
+  cursor: pointer;
 }
 
 div.solid {
