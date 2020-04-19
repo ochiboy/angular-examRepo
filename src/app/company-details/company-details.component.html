@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td>
+      <button (click)="setPeriod('7DAYS')">
+        7 Days
+      </button>
+    </td>
+    <td>
+      <button (click)="setPeriod('30DAYS')">
+        30 Days
+      </button>
+    </td>
+    <td>
+      <button (click)="setPeriod('60DAYS')">
+        60 Days
+      </button>
+    </td>
+  </tr>
+</table>
+
+<table *ngIf="selectedPeriod">
+  <tr>
+    <td>
+      Average change
+    </td>
+    <td>
+      {{selectedPeriod.AC}}
+    </td>
+  </tr>
+   <tr>
+    <td>
+      Period change
+    </td>
+    <td>
+      {{selectedPeriod.PC}}
+    </td>
+  </tr>
+   <tr>
+    <td>
+      Next Predicted change
+    </td>
+    <td>
+      {{selectedPeriod.NPC}}
+    </td>
+  </tr>
+</table>
