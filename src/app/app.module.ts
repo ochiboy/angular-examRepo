@@ -6,11 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CartService } from './services/cart.service';
 import { DataService } from './services/data.service';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
@@ -31,8 +27,6 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
     CompanyDetailsComponent,
     SearchBarComponent
   ],

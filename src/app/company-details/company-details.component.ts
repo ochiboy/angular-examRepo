@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Input } from '@angular/core';
 
 
@@ -7,13 +7,17 @@ import { Input } from '@angular/core';
   templateUrl: './company-details.component.html',
   styleUrls: ['./company-details.component.css']
 })
-export class CompanyDetailsComponent implements OnInit {
+export class CompanyDetailsComponent implements OnInit,OnChanges {
   @Input() company;
   selectedPeriod;
 
   constructor() { }
 
   ngOnInit() {
+    this.selectedPeriod = this.company['7DAYS']; 
+  }
+
+  ngOnChanges() {
     this.selectedPeriod = this.company['7DAYS']; 
   }
 
