@@ -1,9 +1,4 @@
 <div>
-
-  <input id="searchInput" type="text">
-
-  <div *ngFor="let company of allCompanies">
-    <p>{{ company }}</p>
-  </div>
-
+  <h2> Search Bar </h2>
+  <input type="text" #searchInput [(ngModel)]="firstName" />
 </div>
