@@ -9,6 +9,11 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartService } from './services/cart.service';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { DataService } from './data.service';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
+import { DaysDetailsComponentComponent } from './days-details-component/days-details-component.component';
+
 
 @NgModule({
   imports: [
@@ -24,10 +29,13 @@ import { CartService } from './services/cart.service';
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    SearchBarComponent,
+    CompanyDetailsComponent,
+    DaysDetailsComponentComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService]
+  providers: [CartService, DataService]
 })
 export class AppModule { }
 
