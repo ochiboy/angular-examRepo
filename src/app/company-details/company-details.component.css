@@ -1,3 +1,13 @@
+.periodDetails {
+  margin-top: 20px;
+  max-width: 300px;
+  border-style: solid;
+}
+
+.periodDescription {
+  padding: 1px;
+}
+
 button.active{
     background:green;
 }

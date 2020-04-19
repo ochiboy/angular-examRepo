@@ -1,3 +1,11 @@
+body {
+  margin-left: 10px;
+}
+
+.searchResult {
+  max-width: 160px;
+}
+
 div.solid {
   border-style: solid;
 }

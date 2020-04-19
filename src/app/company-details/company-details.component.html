@@ -1,55 +1,63 @@
-<table>
-  <tr>
-    <td>
-      <button (click)="setPeriod('7DAYS')" [ngClass]="periodName == '7DAYS' ? 'active' : ''">
-        7 Days
-      </button>
-    </td>
-    <td>
-      <button (click)="setPeriod('30DAYS')" [ngClass]="periodName == '30DAYS' ? 'active' : ''">
-        30 Days
-      </button>
-    </td>
-    <td>
-      <button (click)="setPeriod('60DAYS')" [ngClass]="periodName == '60DAYS' ? 'active' : ''">
-        60 Days
-      </button>
-    </td>
-  </tr>
-</table>
+<div class="periodDetails">
+  <table>
+    <tr>
+      <td>
+        <button (click)="setPeriod('7DAYS')" [ngClass]="periodName == '7DAYS' ? 'active' : ''">
+          7 Days
+        </button>
+      </td>
+      <td>
+        <button (click)="setPeriod('30DAYS')" [ngClass]="periodName == '30DAYS' ? 'active' : ''">
+          30 Days
+        </button>
+      </td>
+      <td>
+        <button (click)="setPeriod('60DAYS')" [ngClass]="periodName == '60DAYS' ? 'active' : ''">
+          60 Days
+        </button>
+      </td>
+    </tr>
+  </table>
 
-<table *ngIf="selectedPeriod">
-  <tr>
-    <td>
-      Average change
-    </td>
-    <td [ngClass]="{
-              'positive' : selectedPeriod.AC > 0,
-              'negative' : selectedPeriod.AC < 0
-          }">
-        {{selectedPeriod.AC > 0 ? '+' : ''}}{{selectedPeriod.AC | number: '1.2-2'}}{{'%'}}
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Period change
-    </td>
-    <td [ngClass]="{
-              'positive' : selectedPeriod.PC > 0,
-              'negative' : selectedPeriod.PC < 0
-          }">
-        {{selectedPeriod.PC > 0 ? '+' : ''}}{{selectedPeriod.PC | number: '1.2-2'}}{{'%'}}
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Next Predicted change
-    </td>
-    <td [ngClass]="{
-              'positive' : selectedPeriod.NPC > 0,
-              'negative' : selectedPeriod.NPC < 0
-          }">
-        {{selectedPeriod.NPC > 0 ? '+' : ''}}{{selectedPeriod.NPC | number: '1.2-2'}}{{'%'}}
-    </td>
-  </tr>
-</table>
+  <table *ngIf="selectedPeriod">
+    <tr>
+      <td>
+        <div class="periodDescription">
+          Average change
+        </div>
+      </td>
+      <td [ngClass]="{
+                'positive' : selectedPeriod.AC > 0,
+                'negative' : selectedPeriod.AC < 0
+            }">
+          {{selectedPeriod.AC > 0 ? '+' : ''}}{{selectedPeriod.AC | number: '1.2-2'}}{{'%'}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="periodDescription">
+          Period change
+        </div>
+      </td>
+      <td [ngClass]="{
+                'positive' : selectedPeriod.PC > 0,
+                'negative' : selectedPeriod.PC < 0
+            }">
+          {{selectedPeriod.PC > 0 ? '+' : ''}}{{selectedPeriod.PC | number: '1.2-2'}}{{'%'}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="periodDescription">
+          Next Predicted change
+        </div>
+      </td>
+      <td [ngClass]="{
+                'positive' : selectedPeriod.NPC > 0,
+                'negative' : selectedPeriod.NPC < 0
+            }">
+          {{selectedPeriod.NPC > 0 ? '+' : ''}}{{selectedPeriod.NPC | number: '1.2-2'}}{{'%'}}
+      </td>
+    </tr>
+  </table>
+</div>
